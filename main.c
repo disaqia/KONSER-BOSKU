@@ -3,7 +3,7 @@
 #include <string.h>
 #include <conio.h>
 int kesempatan=2;
-char nama[50],user[50], pass[50],adminU[20],adminP[20],cariA[30],cariB[30];
+char user[50], pass[50],adminU[20],adminP[20],cariA[30],cariB[30];
 
 //MENU MENU DALAM PROGRAM
 void registrasi();
@@ -12,6 +12,7 @@ void masuk_admin();
 
 int menuawal;
 void main () {
+	system("cls");
 	puts("\t\t\t\t+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+");
 	puts ("\t\t\t\tSELAMAT DATANG DI PROGRAM PEMESANAN KONSER MUSIK (D CONCERT)");
 	puts("\t\t\t\t+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+");
@@ -31,6 +32,7 @@ void main () {
 			masuk_admin();
 			break;
 		case 3:
+			return;
 			system("cls");
 			break;
 		default :
@@ -39,13 +41,11 @@ void main () {
 	}
 }
 void registrasi () {
-
+	system("cls");
 	puts("\t\t\t\t\t++++++++++++++++++++++++++++++++++++++");
 	puts("\t\t\t\t\t\t  REGISTRASI AKUN ");
 	puts("\t\t\t\t\t++++++++++++++++++++++++++++++++++++++");
-	printf("\nNama Kamu\t : ");
-	gets(nama);
-	printf ("Username\t : ");
+	printf ("\nUsername\t : ");
 	gets(user);
 	printf ("Password\t : ");
 	gets(pass);
@@ -57,15 +57,20 @@ void registrasi () {
 }
 
 void login_user() {
+	system("cls");
 	puts("\t\t\t\t\t========================================");
 	puts("\t\t\t\t\t\t    LOGIN AKUN USER");
 	puts("\t\t\t\t\t========================================");
-	printf("Kesempatan login kamu %d kali",kesempatan);
+
+	if (kesempatan>0) {
+		printf("Kesempatan login kamu %d kali",kesempatan);
+	}
+
 	printf ("\nUsername\t : ");
 	gets(cariA);
 	printf ("Password\t : ");
 	gets(cariB);
-	if (kesempatan>0) {
+	if (kesempatan>1) {
 		if (strcmp(user,cariA)==0&&strcmp(pass,cariB)==0) {
 			printf("\nLogin sukses\n");
 			printf("Lanjutkan");
@@ -76,11 +81,12 @@ void login_user() {
 			printf("Login Gagal\n");
 			kesempatan--;
 			login_user();
-			printf("Kesempatan login habis. Silahkan registrasi akun ulang!");
-			getchar();
-			system("cls");
-			main();
 		}
+	} else {
+		system("cls");
+		printf("Kesempatan login habis. Silahkan registrasi akun ulang!");
+		getchar();
+		main();
 	}
 }
 
