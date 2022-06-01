@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <conio.h>
+#include "User.h"
 int kesempatan=2;
 char user[50], pass[50],adminU[20],adminP[20],cariA[30],cariB[30];
 
