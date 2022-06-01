@@ -1,21 +1,21 @@
-#include "User.h"
+#include "Admin.h"
 
-int menuUser;
-void MainUser()
+int menuAdmin;
+void MainAdmin()
 {
 	system("cls");
 	puts("\t\t\t\t+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+");
-	puts ("\t\t\t\t(D CONCERT) MENU USER");
+	puts ("\t\t\t\t(D CONCERT) MENU ADMIN");
 	puts("\t\t\t\t+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+");
 	puts ("Menu D Concert :");
-	puts ("1. Booking");
-	puts ("2. Topup");
+	puts ("1. Konser");
+	puts ("2. Seat");
 	puts ("3. Logout");
 	printf ("\nPilihan	:");
-	scanf("%d",&menuUser);
+	scanf("%d",&menuAdmin);
 	getchar();
 	system ("cls");
-	switch (menuUser) {
+	switch (menuAdmin) {
 //		case 1:
 //			registrasi();
 //			break;

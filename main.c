@@ -3,6 +3,8 @@
 #include <string.h>
 #include <conio.h>
 #include "User.h"
+#include "Admin.h"
+
 int kesempatan=2;
 char user[50], pass[50],adminU[20],adminP[20],cariA[30],cariB[30];
 
@@ -27,10 +29,14 @@ void main () {
 	system ("cls");
 	switch (menuawal) {
 		case 1:
-			registrasi();
+//			registrasi();
+			MainUser();
+			main();
 			break;
 		case 2:
-			masuk_admin();
+//			masuk_admin();
+			MainAdmin();
+			main();
 			break;
 		case 3:
 			return;
