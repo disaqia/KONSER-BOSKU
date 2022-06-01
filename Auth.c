@@ -219,13 +219,13 @@ void daftaruser() {
 	printf("\tEmail\t: ");
 	fflush(stdin);
 	gets(UserType.email);
-	printf("\tName: ");
+	printf("\tNama\t: ");
 	gets(UserType.name);
-	printf("\tUserame: ");
+	printf("\tUsername\t: ");
 	gets(UserType.username);
-	printf("\tPassword: ");
+	printf("\tPassword\t: ");
 	gets(UserType.password);
-	printf("\tNo. HP: ");
+	printf("\tNo. HP\t: ");
 	gets(UserType.phone);
 	UserType.balance = 0;
 	fwrite (&UserType, sizeof (UserType), 1, akun);
