@@ -121,6 +121,9 @@ void menuadmin() {
 void AuthLogin(int try) {
 	char username[32], password[32];
 	system("cls");
+	puts("\t\t\t\t\t========================================");
+	puts("\t\t\t\t\t\t    LOGIN AKUN USER");
+	puts("\t\t\t\t\t========================================");
 	if (try>0) {
 			FILE*akun;
 			if (try>0) {
