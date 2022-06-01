@@ -32,10 +32,6 @@ void main () {
 	system ("cls");
 	switch (menuawal) {
 		case 1:
-//			registrasi();
-//			kesempatan=3;
-//			login_user();
-//			MainUser();
 			AuthLogin(3);
 			getchar();
 			main();
