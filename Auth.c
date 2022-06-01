@@ -130,9 +130,6 @@ void AuthLogin(int try) {
 			scanf("%s", &username);
 			printf("\nPassword: ");
 			scanf("%s", &password);
-
-
-			int i = 1;
 			akun = fopen(db_akun, "rb");
 			while (fread(&UserType, sizeof(UserType), 1, akun) == 1) {
 				i++;
