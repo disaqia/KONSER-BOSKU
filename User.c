@@ -23,8 +23,9 @@ void MainUser()
 //			masuk_admin();
 //			break;
 		case 3:
-			return;
 			system("cls");
+			printf("Anda akan logout dari sistem...");
+			return;
 			break;
 		default :
 			printf("ERROR!!!\nTidak ada menu yang kamu pilih.");

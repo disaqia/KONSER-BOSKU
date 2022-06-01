@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <conio.h>
+#include "Auth.h"
 #include "User.h"
 #include "Admin.h"
 
@@ -20,9 +21,11 @@ void main () {
 	puts ("\t\t\t\tSELAMAT DATANG DI PROGRAM PEMESANAN KONSER MUSIK (D CONCERT)");
 	puts("\t\t\t\t+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+");
 	puts ("Menu D Concert :");
-	puts ("1. User");
-	puts ("2. Admin");
-	puts ("3. Exit");
+	puts ("1. Login User");
+	puts ("2. Login Admin");
+	puts ("3. Registrasi Akun");
+	puts ("4. Auth");
+	puts ("5. Exit");
 	printf ("\nPilihan	:");
 	scanf("%d",&menuawal);
 	getchar();
@@ -30,15 +33,26 @@ void main () {
 	switch (menuawal) {
 		case 1:
 //			registrasi();
-			MainUser();
+//			kesempatan=3;
+//			login_user();
+//			MainUser();
+			AuthLogin(3);
+			getchar();
 			main();
 			break;
 		case 2:
-//			masuk_admin();
-			MainAdmin();
+			masuk_admin();
 			main();
 			break;
 		case 3:
+			daftaruser();
+			main();
+			break;
+		case 4:
+			auth();
+			main();
+			break;
+		case 5:
 			return;
 			system("cls");
 			break;
@@ -111,14 +125,12 @@ void masuk_admin() {
 	printf ("Password\t : ");
 	gets(adminP);
 	if (strcmp(adminU,"admin")==0&&strcmp(adminP,"admin")==0) {
-		printf("\nLogin sukses");
-		getchar();
-		system("cls");
+		MainAdmin();
 	} else {
 		printf("\nlogin gagal");
 		getchar();
 		system("cls");
-		main();
+		return;
 	}
 
 }

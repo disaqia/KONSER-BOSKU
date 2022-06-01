@@ -5,7 +5,7 @@ void MainAdmin()
 {
 	system("cls");
 	puts("\t\t\t\t+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+");
-	puts ("\t\t\t\t(D CONCERT) MENU ADMIN");
+	puts ("\t\t\t\t\t\t DASHBOARD MENU ADMIN (D CONCERT)");
 	puts("\t\t\t\t+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+");
 	puts ("Menu D Concert :");
 	puts ("1. Konser");

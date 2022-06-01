@@ -53,3 +53,5 @@ dkms.conf
 
 *.layout
 Konser.layout
+Makefile.win
+db_akun.dat
