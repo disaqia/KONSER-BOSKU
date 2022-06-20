@@ -4,7 +4,7 @@
 
 /* Prototypes for the functions */
 /* Sums two ints */
-void auth();
+void AuthLogin();
 void AuthLogin();
 void daftaruser();
 
